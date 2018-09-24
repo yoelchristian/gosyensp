@@ -5,7 +5,7 @@ import API from "../utils/api.js";
 import NavigationBar from "./NavigationBar";
 import ControlledCarousel from "./ControlledCarousel.js";
 import Card from "./Card.js";
-import ProductDetail from "./ProductDetail.js";
+import ProductModal from "./ProductModal.js";
 
 class Main extends Component {
   state = {
@@ -56,7 +56,7 @@ class Main extends Component {
             </div>
           </div>
           <Switch>
-            <Route exact path="/products/:id" component= { ProductDetail } />
+            <Route exact path="/products/:id" component= { ProductModal } />
           </Switch>
         </div>  
       </Router>

@@ -5,7 +5,8 @@ import "../css/card.css";
 
 const Card = props =>
 
-<div className="col-sm-4 mb-4">
+<div className="col-sm-6 col-md-4 mb-4">
+<Link to={"/products/" + props.linkURL}>
   <div className="card">
     <div className="img-container">
       <img className="card-image" src={require("../images/5B8_4979.jpg")} />
@@ -20,6 +21,7 @@ const Card = props =>
 
     </div>
   </div>
+  </Link>
 </div>
 
 export default Card;
