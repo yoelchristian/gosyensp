@@ -15,5 +15,13 @@ module.exports = {
       }).catch(function(err) {
         res.json(err);
       })
+    },
+
+    findByCategory: function(req, res) {
+      Product.findById(req.params.id).then(function(dbGosyensp) {
+        res.json(dbGosyensp);
+      }).catch(function(err) {
+        res.json(err);
+      })
     }
 };

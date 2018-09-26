@@ -27,7 +27,9 @@ class Main extends Component {
                 <Switch>
                   <Route exact path="/" component= { TestComponent } />
                   <Route exact path="/products" component= { Card } />
-                  <Route exact path="/products/:id" component= { ProductModal } />
+                  <Route exact path="/products/:category" component= { Card } />
+                  <Route exact path="/products/:category/:subcategory" component= { TestComponent } />
+                  <Route exact path="/products/:category/:subcategory/:id" component= { ProductModal } />
                 </Switch>
               </div>
               
