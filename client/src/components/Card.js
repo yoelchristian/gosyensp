@@ -1,27 +1,43 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import "../css/card.css";
+import React, { Component } from "react";
+import API from "../utils/api.js";
+import CardDetail from "./CardDetail.js";
 
-const Card = props =>
+class Card extends Component {
+  state = {
+    productData: []
+  };
 
-<div className="col-sm-6 col-md-4 mb-4">
-<Link to={"/products/" + props.linkURL}>
-  <div className="card">
-    <div className="img-container">
-      <img className="card-image" src={require("../images/5B8_4979.jpg")} />
-    </div>
-    <div className="info-container">
-      <Link to={"/products/" + props.linkURL}><h4><b>{props.title}</b></h4></Link>
-      <h6>{props.itemCode}</h6>
-      <p>Harga: {props.itemCategory}</p>
-      <p>Stock: {props.qtyOnhand} pcs</p>
-      <p>Stock: {props.qtyOnhand} pcs</p>
-      <p>Stock: {props.qtyOnhand} pcs</p>
+  componentDidMount() {
+    this.getProduct();
+  }
 
-    </div>
-  </div>
-  </Link>
-</div>
+  getProduct = () => {
+    API.getAllProducts().then((res) => {
+      this.setState({ productData: res.data })
+    });
+  }
+
+  renderProductData = () => {
+    return this.state.productData.map(product => (
+      <CardDetail 
+        key={ product._id }
+        itemCode={ product.itemcode }
+        lastSold={ product.lastsold }
+        title={ product.descript }
+        linkURL={ product._id }
+        itemCategory={ product.price }
+        qtyOnhand={ product.onhand }
+      />
+    ));
+  };
+
+  render() {
+    return (
+      <div>
+        {this.renderProductData()}
+      </div>
+    )
+  }
+}
 
 export default Card;
