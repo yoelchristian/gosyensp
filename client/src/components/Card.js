@@ -4,17 +4,47 @@ import CardDetail from "./CardDetail.js";
 
 class Card extends Component {
   state = {
-    productData: []
+    productData: [],
+    paramsState: {}
   };
 
   componentDidMount() {
-    this.getProduct();
+    console.log("refreshed")
+    this.setState({paramsState: this.props.match.params})
+    if(this.props.match.params.subcategory) {
+      this.getProductBySubcategory();
+    } else if (this.props.match.params.category) {
+      this.getProductByCategory();
+    }
+  }
+
+  componentDidUpdate() {
+    if(JSON.stringify(this.props.match.params) !== JSON.stringify(this.state.paramsState)) {
+      this.setState({paramsState: this.props.match.params})
+      if(this.props.match.params.subcategory) {
+        this.getProductBySubcategory();
+      } else if (this.props.match.params.category) {
+        this.getProductByCategory();
+      }
+    }
   }
 
   getProduct = () => {
     API.getAllProducts().then((res) => {
       this.setState({ productData: res.data })
     });
+  }
+
+  getProductByCategory = () => {
+    API.getProductByCategory(this.props.match.params.category).then((res) => {
+      this.setState({ productData: res.data })
+    });
+  }
+
+  getProductBySubcategory = () => {
+    API.getProductBySubcategory(this.props.match.params.subcategory).then((res) => {
+      this.setState({ productData: res.data })
+    })
   }
 
   renderProductData = () => {

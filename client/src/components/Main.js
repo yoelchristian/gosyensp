@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from "react-router-dom";
 
 import API from "../utils/api.js";
 import NavigationBar from "./NavigationBar";
@@ -28,7 +28,7 @@ class Main extends Component {
                   <Route exact path="/" component= { TestComponent } />
                   <Route exact path="/products" component= { Card } />
                   <Route exact path="/products/:category" component= { Card } />
-                  <Route exact path="/products/:category/:subcategory" component= { TestComponent } />
+                  <Route exact path="/products/:category/:subcategory" component= { Card } />
                   <Route exact path="/products/:category/:subcategory/:id" component= { ProductModal } />
                 </Switch>
               </div>
@@ -41,4 +41,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default withRouter(Main);

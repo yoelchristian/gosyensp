@@ -11,8 +11,11 @@ const API = {
     },
 
     getProductByCategory: (category) => {
-      console.log(category)
-      return axios.get("/api/products/" + category);
+      return axios.get("/api/products/category/" + category);
+    },
+
+    getProductBySubcategory: (subcategory) => {
+      return axios.get("/api/products/subcategory/" + subcategory);
     }
 }
 

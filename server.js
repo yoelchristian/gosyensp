@@ -15,7 +15,8 @@ var router = new express.Router();
 
 router.get("/api/products", gosyenspController.find);
 router.get("/api/products/:id", gosyenspController.findById);
-router.get("/api/products/:category", gosyenspController.findByCategory);
+router.get("/api/products/category/:category", gosyenspController.findByCategory);
+router.get("/api/products/subcategory/:subcategory", gosyenspController.findBySubcategory);
 
 app.use(router);
 
