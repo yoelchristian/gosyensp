@@ -6,8 +6,8 @@ import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from "react-router-dom";
 import SvgIcon from 'react-icons-kit';
 
-import { ic_home } from 'react-icons-kit/md/ic_home';
-import { ic_business } from 'react-icons-kit/md/ic_business';
+import { ic_music_note } from 'react-icons-kit/md/ic_music_note';
+import { ic_directions_run } from 'react-icons-kit/md/ic_directions_run';
 import { ic_business_center } from 'react-icons-kit/md/ic_business_center';
 
 import "../css/sidenav.css";
@@ -79,7 +79,7 @@ const SeparatorTitle = props => {
       >
 
       <Nav id="products/musik">
-        <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Musik</NavText>
+        <NavIcon><Icon20 icon={ ic_music_note } /></NavIcon><NavText> Produk Musik</NavText>
       </Nav>
       <SeparatorTitle></SeparatorTitle>
 
@@ -108,7 +108,7 @@ const SeparatorTitle = props => {
       
       <SeparatorTitle></SeparatorTitle>
       <Nav id="products/sports">
-        <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Sports</NavText>
+        <NavIcon><Icon20 icon={ ic_directions_run } /></NavIcon><NavText> Produk Sports</NavText>
       </Nav>
       <SeparatorTitle></SeparatorTitle>
 
