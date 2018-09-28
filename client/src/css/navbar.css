@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #051016;
+  border-color: #051016;
+  
+}
+
+.logo-brand {
+  height: 100%;
+  margin-right: 5px;
+}
+
+.brand-text {
+  color: white
+}
+
+.dropdown-menu {
+  min-width: 25vw;
+  min-height: 20vh;
+  max-height: 60vh;
+  overflow: auto;
+}

@@ -1,41 +1,45 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from "react-router-dom";
 
-import API from "../utils/api.js";
 import NavigationBar from "./NavigationBar";
 import ControlledCarousel from "./ControlledCarousel.js";
 import Card from "./Card.js";
-import ProductModal from "./ProductModal.js";
 import SideNav  from "./SideNav.js";
-import TestComponent from "./TestComponent.js";
+import About from "./About.js";
+import Footer from "./Footer.js";
+import ScrollToTop from "./ScrollToTop.js";
 
 class Main extends Component {
 
   render() {
     return (
       <Router>
+        <div>
         <div className="main-container">
           <NavigationBar />
           <ControlledCarousel />
           
           <div className="container">
             <div className="row">
-              <div className="col-sm-3">
+              <div className="col-sm-3 hidden-xs">
                 <SideNav />
               </div>
               <div className="col-sm-9">
                 <Switch>
-                  <Route exact path="/" component= { TestComponent } />
+                  <Route exact path="/about" component= { About } />
                   <Route exact path="/products" component= { Card } />
                   <Route exact path="/products/:category" component= { Card } />
                   <Route exact path="/products/:category/:subcategory" component= { Card } />
-                  <Route exact path="/products/:category/:subcategory/:id" component= { ProductModal } />
                 </Switch>
               </div>
               
             </div>
           </div>
         </div>
+        <ScrollToTop />
+        <Footer />
+        </div>
+        
       </Router>
     )
   }

@@ -1,98 +1,121 @@
 import React from "react";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import "../css/navbar.css";
 
-const NavigationBar = () =>
-<Navbar inverse fixedTop collapseOnSelect>
-  <Navbar.Header>
-    <Navbar.Brand>
-      <a href="/">Gosyen S. P</a>
-    </Navbar.Brand>
-    <Navbar.Toggle />
-  </Navbar.Header>
-  <Navbar.Collapse>
-    <Nav>
-      <NavItem eventKey={1} href="#">
-        Link
-      </NavItem>
-      <NavItem eventKey={2} href="#">
-        Link
-      </NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={3.3}>Separated link</MenuItem>
-      </NavDropdown>
-    </Nav>
-    <Nav pullRight>
-      <NavItem eventKey={1} href="#">
-        Link Right
-      </NavItem>
-      <NavItem eventKey={2} href="#">
-        Link Right
-      </NavItem>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>;
+class NavigationBar extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+  }
 
-/* <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-  <div className="container">
-    <a className="navbar-brand" href="/">Gosyen S. P</a>
+  componentDidMount() {
+    
+  }
+  render() {
+    const NavMusik = {
+      cello: { category: 'Cello', subcategory: ["Cello Parts - Cello Strings", "Cello Parts - Cello Bow", "Cello Parts - Cello Bridge"] },
+      cymbal: { category: 'Cymbal', subcategory: ["Cymbal - Brass Cymbal", "Cymbal Parts - Accesories", "Cymbal Parts - Felt", "Cymbal Parts - H/C Cymbal", "Cymbal Parts - S/B Cymbal", "Cymbal - Brass Alloy Cymbal", "Cymbal - Metal Alloy", "Cymbal Stands - Stand Cymbal Boom", "Cymbal Stands - Stand Cymbal Hi-Hat", "Cymbal Stands - Stand Cymbal Staright"] },
+      drum: { category: 'Drum', subcategory: ["Drum Head", "Snare Drum", "Drum Parts - Wire", "Drum Parts - Bass Drum", "Drum Parts - Drum Pad", "Drum Parts - Drum Stick", "Drum Parts - Floor Tom", "Drum Parts - Key Drum", "Drum Parts - Drum Key", "Drum Parts - Small Bass", "Drum Parts - Tension", "Drum Parts - Lug", "Drum Parts - Ratchet", "Drum Parts - Tom Holder", "Drum Set - Bass Drum", "Drum Set - Drum Throne", "Drum Set - Junior", "Drum Set - Senior", "Drum Set Parts - Pedal Beater", "Drum Set Parts - Snare Drum", "Drum Parts - H/C Drum Stick", "Drum Parts - Ring Mute", "Drum Parts - S/B", "Drum Parts - Tas"] },
+      guitar: { category: "Guitar", subcategory: ["Guitar - Classic", "Guitar - Jumbo", "Guitar - Junior", "Guitar - Okulele", "Guitar - Sayur", "Guitar - Tanduk", "Guitar Parts - Nylon", "Guitar Parts - Strings", "Guitar Parts - Cable", "Guitar Parts - Capo", "Guitar Parts - Strings", "Guitar Parts - Dryer", "Guitar Parts - Effect", "Guitar Parts - End Pin", "Guitar Parts - Foot Stool", "Guitar Parts - Grip", "Guitar Parts - Holder Pick", "Guitar Parts - Nut Guitar", "Guitar Parts - Pick", "Guitar Parts - Pin", "Guitar Parts - Polish", "Guitar Parts - Sound Hole Block", "Guitar Parts - Winder", "Guitar Stand", "Guitar Parts - Equalizer For Guitar", "Guitar Parts - G/S", "Guitar Parts - H/C", "Guitar Parts - S/B", "Guitar Parts - Semi H/C", "Guitar Parts - String Agnel" ] },
+      keyboard: { category: "Keyboard", subcategory: ["Keyboard Parts - Piano", "Keyboard Parts - Sustain Pedal", "Keyboard Parts - Cover Key", "Keyboard Parts - Hard Case", "Keyboard Parts - S/B Keyboard", "Keyboard Parts - Semi Hard Case", "Keyboard Stand"] },
+      marching: { category: "Marching", subcategory: ["Marching Band - Marching Bell", "Marching Band - Glockenspiel", "Marching Drum - Bass", "Marching Drum - Quartom", "Marching Drum - Snare", "Marching Drum - Trio Tom", "Marching Drum Parts - Strainer", "Marching Drum Parts - Snare Switch", "Marching Drum Parts - Tension Rod/Screw", "Marching Parts - Baut for Lug", "Marching Parts - Claw", "Marching Parts - Drat for Lug", "Marching Parts - Hardness", "Marching Parts - Ring Hoop", "Marching Band - Bass Beater Handled", "Marching Band - Stick Mayoret", "Marching Band - Sling", "Marching Band - Stick Bellyra", "Marching Band - Tenor Beater handled"] },
+      others: { category: "Others", subcategory: ["Others - Jack Akay Mono Metal", "Others - Knop", "Others - Microphone", "Others - Music LED", "Others - Music Stand Book", "Others - Music Stand Organ", "Others - Potensio Mono", "Others - Soket Akay Mono Metal", "Others - Stand Keyboard", "Others - Stand Mic", "Others - Tuning Fork/Garputala", "Others - Mic Filter", "Others - Sponge", "Others - Conductor Baton", "Others - Desktop Microphone"] },
+      percussion: { category: "Percussion", subcategory: ["Percussion - Bongo", "Percussion - Conga", "Percussion - Tambourine", "Percussion - Tumbuk Batu", "Percussion - Rebana", "Percussion - Cajon", "Percussion - Marawis Batik", "Percussion - Rototom", "Percussion - Tas Cajon", "Percussion - Barchime", "Percussion - Cabasa", "Percussion - Castanet", "Percussion - Cowbell", "Percussion - Egg Maracas", "Percussion - Latin Shaker", "Percussion - Wood Maracas"] },
+      violin: { category: "Violin", subcategory: ["Violin - Biola", "Violin Parts - Chinrest Clamp", "Violin Parts - Chinrest Plastic", "Violin Parts - Chinrest Wood", "Violin Parts - Dryer Biola", "Violin Parts - Pitch Pipe", "Violin Parts - Polish", "Violin Parts - Shoulder Rest", "Violin Parts - Siongka Kotak", "Violin Parts - Steamer Biola", "Violin Parts - Tailgut", "Violin Parts - Tuner", "Violin Parts - Violin Bow", "Violin Parts - Violin Bridge", "Violin Parts - Adjustable Violin Stand", "Violin Parts - Shoulder Rest", "Violin Parts - Violin Strings", "Violin Parts - Violin Mute", "Violin Parts - Pick - Up"] },
+      wind: { category: "Wind Instrument", subcategory: ["Wind Instrument - Harmonica Bee", "Wind Instrument - Harmonica Qimei", "Wind Instrument - Harmonica Swan Single", "Wind Instrument - HR Alto Saxophone", "Wind Instrument - HR Clarinet", "Wind Instrument - HR Flute", "Wind Instrument - HR Marching", "Wind Instrument - HR Mellophone", "Wind Instrument - HR Seruling", "Wind Instrument - HR Tenor Trombone", "Wind Instrument - Hr Trumpet", "Wind Parts - Cream for Saxophone", "Wind Parts - Universal Saxophone Stand", "Wind Parts - Harmonica Holder", "Wind Parts - Mouth Piece", "Wind Parts - Pianika Hose", "Wind Instrument - Pianika", "Wind Parts - Reeds Alto", "Wind Parts - Minyak Terumpet"] },
+      ampli: { category: "Amplifier", subcategory: ["Ampli - Bass", "Ampli - Guitar", "Ampli - Keyboard"] },
+    };
 
-    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
+    const NavSports = {
+      peluit: { category: "Peluit" },
+      basket: { category: "Basket", subcategory: ["Basket - Papan", "Basket - Ring"] },
+      bela: { category: "Bela Diri", subcategory: ["Bela Diri - Body Protector", "Bela Diri - Foot Protector", "Bela Diri - Hand Protector"] },
+      billyard: { category: "Billyard" },
+      bola: { category: "Bola Parts" },
+      catur: { category: "Catur" },
+      fitness: { category: "Fitness" },
+      jogging: { category: "Jogging" },
+      renang: { category: "Renang" },
+      senam: { category: "Senam" },
+      sport: { category: "Sport" },
+      tinju: { category: "Tinju", subcategory: ["Tinju - Punching Pad", "Tinju - Samsak", "Tinju - Sarung Tinju"] },
+    };
 
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="about.html">About</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="services.html">Services</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Portfolio
-          </a>
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a className="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-              <a className="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-              <a className="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-              <a className="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-              <a className="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-            </div>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-          </a>
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a className="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a className="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a className="dropdown-item" href="blog-post.html">Blog Post</a>
-            </div>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-          </a>
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a className="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a className="dropdown-item" href="sidebar.html">Sidebar Page</a>
-              <a className="dropdown-item" href="faq.html">FAQ</a>
-              <a className="dropdown-item" href="404.html">404</a>
-              <a className="dropdown-item" href="pricing.html">Pricing Table</a>
-            </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> */
+    return (
+      <Navbar fixedTop collapseOnSelect className="navbar">
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a className="brand-text" href="/"><span className="brand-text"><img className="logo-brand" src={require("../images/logo1.png")} />Gosyen S. P</span></a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <LinkContainer to="/home">
+              <NavItem >
+                <span className="glyphicon glyphicon-home"></span> Home 
+              </NavItem>
+            </LinkContainer>
+          </Nav>
+          <Nav>
+            <LinkContainer to="/about">
+              <NavItem >
+                <span className="glyphicon glyphicon-object-align-bottom"></span> Tentang Kami 
+              </NavItem>
+            </LinkContainer>
+          </Nav>
+          <Nav pullRight className="hidden-lg hidden-md">
+
+            <NavDropdown title="Musik" id="basic-nav-dropdown">
+            {Object.keys(NavMusik).map(key => {
+          
+              if (NavMusik[key].subcategory) {
+                return (
+                  <NavDropdown title={NavMusik[key].category} id={key}>
+                    {NavMusik[key].subcategory.map(i => (
+                      <LinkContainer to={"/products/" + key + "/" + i }>
+                        <MenuItem> {i} </MenuItem>
+                      </LinkContainer>
+                    ))}
+                  </NavDropdown>
+                ); 
+              } else {
+                return (
+                <LinkContainer to={"/products/" + key}>
+                  <MenuItem> {NavMusik[key].category} </MenuItem>
+                </LinkContainer>                );
+              }
+            })}
+            </NavDropdown>
+
+            <NavDropdown title="Olahraga" id="basic-nav-dropdown2">
+            {Object.keys(NavSports).map(key => {
+          
+              if (NavSports[key].subcategory) {
+                return (
+                  <NavDropdown title={NavSports[key].category} id={key}>
+                    {NavSports[key].subcategory.map(i => (
+                      <LinkContainer to={"/products/" + key + "/" + i }>
+                        <MenuItem> {i} </MenuItem>
+                      </LinkContainer>
+                    ))}
+                  </NavDropdown>
+                ); 
+              } else {
+                return (
+                  <LinkContainer to={"/products/" + key}>
+                    <MenuItem> {NavSports[key].category} </MenuItem>
+                  </LinkContainer>
+                );
+              }
+            })}
+            </NavDropdown>
+
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    )
+  }
+}
 
 export default NavigationBar;

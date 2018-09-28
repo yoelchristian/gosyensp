@@ -51,8 +51,7 @@ class SideNavigation extends React.Component {
       senam: { category: "Senam" },
       sport: { category: "Sport" },
       tinju: { category: "Tinju", subcategory: ["Tinju - Punching Pad", "Tinju - Samsak", "Tinju - Sarung Tinju"] },
-      
-    }
+    };
 
 const SeparatorTitleContainer = styled.div`
     font-size: 14px;
@@ -64,7 +63,7 @@ const SeparatorTitle = props => {
     return (
         <SeparatorTitleContainer>
             {props.children}
-            <hr style={{ border: 0, borderTop: '1px solid #E5E5E5' }} />
+            <hr style={{ border: 0, borderTop: '1px solid #E5E5E5', marginTop: 5, marginBottom: 5 }} />
         </SeparatorTitleContainer>
     );
 };
@@ -78,67 +77,63 @@ const SeparatorTitle = props => {
         highlightColor="#E91E63"
         onItemSelection={ (id, parent) => {this.props.history.push("/" + id)} }
       >
+
+      <Nav id="products/musik">
+        <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Musik</NavText>
+      </Nav>
+      <SeparatorTitle></SeparatorTitle>
+
+      {Object.keys(NavMusik).map(key => {
+        
+        if (NavMusik[key].subcategory) {
+          return (
+            <Nav key={key} id={"products/" + key}>
+              <NavText> {NavMusik[key].category} </NavText>
+              {NavMusik[key].subcategory.map(i => (
+                <Nav key={i} id={i.toLowerCase()}>
+                  <NavText> {i} </NavText>
+                </Nav>
+              ))}
+            </Nav>
+          ); 
+        } else {
+          return (
+            <Nav key={key} id={"products/" + key}>
+              <NavText> {NavMusik[key].category} </NavText>
+            </Nav>
+          );
+        }
+        
+      })}
       
-        <Nav id="">
-          <NavIcon><Icon20 icon={ ic_home } /></NavIcon><NavText> Home </NavText>
-        </Nav>
-        <Nav id="about">
-          <NavIcon><Icon20 icon={ ic_business } /></NavIcon><NavText> Profil Perusahaan </NavText>
-        </Nav>
-        <SeparatorTitle></SeparatorTitle>
-        <Nav id="products/musik">
-          <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Musik</NavText>
-        </Nav>
+      <SeparatorTitle></SeparatorTitle>
+      <Nav id="products/sports">
+        <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Sports</NavText>
+      </Nav>
+      <SeparatorTitle></SeparatorTitle>
 
-        {Object.keys(NavMusik).map(key => {
+      {Object.keys(NavSports).map(key => {
+        
+        if (NavSports[key].subcategory) {
+          return (
+            <Nav key={key} id={"products/" + key}>
+              <NavText> {NavSports[key].category} </NavText>
+              {NavSports[key].subcategory.map(i => (
+                <Nav key={i} id={i.toLowerCase()}>
+                  <NavText> {i} </NavText>
+                </Nav>
+              ))}
+            </Nav>
+          ); 
+        } else {
+          return (
+            <Nav key={key} id={"products/" + key}>
+              <NavText> {NavSports[key].category} </NavText>
+            </Nav>
+          );
+        }
           
-          if (NavMusik[key].subcategory) {
-            return (
-              <Nav key={key} id={"products/" + key}>
-                <NavText> {NavMusik[key].category} </NavText>
-                {NavMusik[key].subcategory.map(i => (
-                  <Nav key={i} id={i.toLowerCase()}>
-                    <NavText> {i} </NavText>
-                  </Nav>
-                ))}
-              </Nav>
-            ); 
-          } else {
-            return (
-              <Nav key={key} id={"products/" + key}>
-                <NavText> {NavMusik[key].category} </NavText>
-              </Nav>
-            );
-          }
-          
-        })}
-
-        <Nav id="products/sports">
-          <NavIcon><Icon20 icon={ ic_business_center } /></NavIcon><NavText> Produk Sports</NavText>
-        </Nav>
-
-        {Object.keys(NavSports).map(key => {
-          
-          if (NavSports[key].subcategory) {
-            return (
-              <Nav key={key} id={"products/" + key}>
-                <NavText> {NavSports[key].category} </NavText>
-                {NavSports[key].subcategory.map(i => (
-                  <Nav key={i} id={i.toLowerCase()}>
-                    <NavText> {i} </NavText>
-                  </Nav>
-                ))}
-              </Nav>
-            ); 
-          } else {
-            return (
-              <Nav key={key} id={"products/" + key}>
-                <NavText> {NavSports[key].category} </NavText>
-              </Nav>
-            );
-          }
-          
-        })}
+      })}
 
       </SideNav>
       </div>

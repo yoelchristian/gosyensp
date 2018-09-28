@@ -1,5 +1,5 @@
 .carousel-item {
-  height: 60vh;
+  height: 70vh;
   background-color: black;
 }
 
@@ -11,14 +11,9 @@
 }
 
 .carousel-intro {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 35px; */
-
   -webkit-animation: fadein 4.0s;
   animation: fadein 4.0s;
+  margin-bottom: 15px;
 }
 
 @-webkit-keyframes fadein {
