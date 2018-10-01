@@ -17,6 +17,9 @@ router.get("/api/products", gosyenspController.find);
 router.get("/api/products/:id", gosyenspController.findById);
 router.get("/api/products/category/:category", gosyenspController.findByCategory);
 router.get("/api/products/subcategory/:subcategory", gosyenspController.findBySubcategory);
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.use(router);
 
