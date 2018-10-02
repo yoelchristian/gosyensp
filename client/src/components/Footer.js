@@ -15,33 +15,33 @@ class Footer extends Component {
                 <div className="col-sm-3">
                     <h5>Get started</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li>Home</li>
+                        <li>Sign up</li>
+                        <li>Downloads</li>
                     </ul>
                 </div>
                 <div className="col-sm-3">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li>Company Information</li>
+                        <li>Contact us</li>
+                        <li>Reviews</li>
                     </ul>
                 </div>
                 <div className="col-sm-3">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
+                        <li>FAQ</li>
+                        <li>Help desk</li>
+                        <li>Forums</li>
                     </ul>
                 </div>
                 <div className="col-sm-3">
                     <h5>Legal</h5>
                     <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li>Terms of Service</li>
+                        <li>Terms of Use</li>
+                        <li>Privacy Policy</li>
                     </ul>
                 </div>
             </div>
@@ -50,10 +50,10 @@ class Footer extends Component {
             </iframe>
         </div>
         <div className="social-networks">
-            <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
+            <a className="twitter"><i className="fa fa-twitter"></i></a>
             
-            <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
-            <a href="#" className="google"><i className="fa fa-google-plus"></i></a>
+            <a className="facebook"><i className="fa fa-facebook"></i></a>
+            <a className="google"><i className="fa fa-google-plus"></i></a>
         </div>
         <div className="footer-copyright">
             <p>© 2018 Gosyen Sonus Perfectus </p>

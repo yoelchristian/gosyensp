@@ -9,6 +9,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^15.6.1",
+    "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
     "react-icons-kit": "^1.1.12",
     "react-router": "^4.3.1",

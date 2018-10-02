@@ -50,20 +50,21 @@ class NavigationBar extends React.Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
-            <LinkContainer to="/home">
-              <NavItem >
-                <span className="glyphicon glyphicon-home"></span> Home 
-              </NavItem>
-            </LinkContainer>
-          </Nav>
-          <Nav>
+          <Nav pullRight>
             <LinkContainer to="/about">
               <NavItem >
                 <span className="glyphicon glyphicon-object-align-bottom"></span> Tentang Kami 
               </NavItem>
             </LinkContainer>
           </Nav>
+          <Nav pullRight>
+            <LinkContainer to="/home">
+              <NavItem >
+                <span className="glyphicon glyphicon-home"></span> Home 
+              </NavItem>
+            </LinkContainer>
+          </Nav>
+          
           <Nav pullRight className="hidden-lg hidden-md">
 
             <NavDropdown title="Musik" id="basic-nav-dropdown">
