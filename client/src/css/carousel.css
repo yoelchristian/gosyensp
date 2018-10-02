@@ -3,13 +3,6 @@
   background-color: black;
 }
 
-.carImg {
-  height: 100%;
-  max-width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .carousel-intro {
   -webkit-animation: fadein 4.0s;
   animation: fadein 4.0s;
@@ -33,12 +26,20 @@
   letter-spacing: 0.1vw;
 }
 
+#size-md, #size-xs {
+  display: none
+}
+
+#size-lg {
+  display: block
+}
+
 @-webkit-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1050px) {
   .main-title-text {
     font-size: 4.5vw;
     font-family: Times;
@@ -46,9 +47,19 @@
   }
   
   .sub-title-text {
-    font-size: 1vw;
+    font-size: 2vw;
     letter-spacing: 0.1vw;
   }
+
+  #size-lg, #size-xs {
+    display: none
+  }
+
+  #size-md {
+    display: block
+  }
+
+
 }
 
 @media screen and (max-width: 501px) {
@@ -75,5 +86,17 @@
   .sub-title-text {
     font-size: 3vw;
     letter-spacing: 0.1vw;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  #size-lg, #size-md {
+    display: none
+  }
+
+  #size-xs {
+    display: block
   }
 }

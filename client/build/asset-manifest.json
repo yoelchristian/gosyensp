@@ -1,9 +1,11 @@
 {
-  "main.css": "static/css/main.d51f05be.css",
-  "main.css.map": "static/css/main.d51f05be.css.map",
-  "main.js": "static/js/main.197c2aa3.js",
-  "main.js.map": "static/js/main.197c2aa3.js.map",
-  "static\\media\\drum.jpg": "static/media/drum.a925dd87.jpg",
+  "main.css": "static/css/main.e2dcba1d.css",
+  "main.css.map": "static/css/main.e2dcba1d.css.map",
+  "main.js": "static/js/main.51e9bc9e.js",
+  "main.js.map": "static/js/main.51e9bc9e.js.map",
+  "static\\media\\drum-lg.jpg": "static/media/drum-lg.14551185.jpg",
+  "static\\media\\drum-md.jpg": "static/media/drum-md.a4f585a1.jpg",
+  "static\\media\\drum-xs.jpg": "static/media/drum-xs.24e3417f.jpg",
   "static\\media\\logo1.png": "static/media/logo1.0f51ad16.png",
   "static\\media\\violin-bckg.jpg": "static/media/violin-bckg.22dc4bce.jpg"
 }
