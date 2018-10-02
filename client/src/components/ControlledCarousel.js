@@ -11,9 +11,9 @@ class ControlledCarousel extends React.Component {
       >
         <Carousel.Item className="carousel-item">
           <img className="carImg" src={require("../images/violin-bckg.jpg")} />
-          <Carousel.Caption>
-            <h3>Gosyen Sonus Perfectus</h3>
-            <p>Distributor Musik & Sports Terpercaya di Indonesia</p>
+          <Carousel.Caption className="centered-carousel-text">
+            <h1 className="main-title-text">Gosyen & Sonus Perfectus</h1>             
+            <p><h3 className="sub-title-text">Distributor Musik & Sports Terpercaya se-Indonesia</h3></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
