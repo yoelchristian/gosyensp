@@ -3,12 +3,6 @@
   background-color: black;
 }
 
-.carousel-intro {
-  -webkit-animation: fadein 4.0s;
-  animation: fadein 4.0s;
-  margin-bottom: 0px;
-}
-
 .centered-carousel-text {
   width: 100%;
   transform: translate(-50%,-50%);
@@ -32,11 +26,6 @@
 
 #size-lg {
   display: block
-}
-
-@-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 @media screen and (max-width: 1050px) {
