@@ -6,7 +6,7 @@ class ControlledCarousel extends React.Component {
   render() {
     return (
       <Carousel
-        interval={3500}
+        interval={null}
         className="carousel-intro"
         pauseOnHover={false}
       >
@@ -18,7 +18,7 @@ class ControlledCarousel extends React.Component {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drumm.jpg")} />
+          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drum-lg.jpg")} />
           <img id="size-md" style={{minHeight: "100%"}} src={require("../images/drum-md.jpg")} />
           <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/drum-xs.jpg")} />
           <Carousel.Caption>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/api.js";
 import CardDetail from "./CardDetail.js";
+import SideNav  from "./SideNav.js";
 
 class Card extends Component {
   state = {
@@ -63,8 +64,17 @@ class Card extends Component {
 
   render() {
     return (
-      <div>
-        {this.renderProductData()}
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-3 hidden-xs">
+            <SideNav />
+          </div>
+          <div className="col-sm-9">
+            <div>
+              {this.renderProductData()}
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

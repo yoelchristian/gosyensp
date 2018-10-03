@@ -51,14 +51,14 @@ class NavigationBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <LinkContainer to="/about">
+            <LinkContainer exact to="/about">
               <NavItem >
                 <span className="glyphicon glyphicon-object-align-bottom"></span> Tentang Kami 
               </NavItem>
             </LinkContainer>
           </Nav>
           <Nav pullRight>
-            <LinkContainer to="/home">
+            <LinkContainer exact to="/">
               <NavItem >
                 <span className="glyphicon glyphicon-home"></span> Home 
               </NavItem>

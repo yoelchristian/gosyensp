@@ -6,7 +6,7 @@
 .carousel-intro {
   -webkit-animation: fadein 4.0s;
   animation: fadein 4.0s;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .centered-carousel-text {
@@ -16,13 +16,14 @@
 }
 
 .main-title-text {
-  font-size: 3.5vw;
+  font-size: 700%;
   font-family: Times;
   letter-spacing: 0.3vw;
 }
 
 .sub-title-text {
-  font-size: 1vw;
+  font-size: 120
+  5;
   letter-spacing: 0.1vw;
 }
 
@@ -40,16 +41,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .main-title-text {
-    font-size: 4.5vw;
-    font-family: Times;
-    letter-spacing: 0.3vw;
-  }
-  
-  .sub-title-text {
-    font-size: 2vw;
-    letter-spacing: 0.1vw;
-  }
+
 
   #size-lg, #size-xs {
     display: none
