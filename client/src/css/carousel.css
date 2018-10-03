@@ -16,14 +16,13 @@
 }
 
 .main-title-text {
-  font-size: 700%;
+  font-size: 10vmin;
   font-family: Times;
   letter-spacing: 0.3vw;
 }
 
 .sub-title-text {
-  font-size: 120
-  5;
+  font-size: 3vmin;
   letter-spacing: 0.1vw;
 }
 
@@ -51,33 +50,17 @@
     display: block
   }
 
-
 }
 
 @media screen and (max-width: 501px) {
   .centered-carousel-text {
     width: 100%;
     transform: translate(-50%,-50%);
-    top: 45%; left: 50%;
-  }
-
-  .carousel-item {
-    height: 300px;
+    top: 50%; left: 50%;
   }
 
   .centered-carousel-text {
     width: 60%;
-  }
-
-  .main-title-text {
-    font-size: 6vw;
-    font-family: Times;
-    letter-spacing: 0.3vw;
-  }
-  
-  .sub-title-text {
-    font-size: 3vw;
-    letter-spacing: 0.1vw;
   }
 
   .carousel-indicators {

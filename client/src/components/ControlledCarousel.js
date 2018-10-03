@@ -11,7 +11,9 @@ class ControlledCarousel extends React.Component {
         pauseOnHover={false}
       >
         <Carousel.Item className="carousel-item">
-          <img className="asd" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
+          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
+          <img id="size-md" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
+          <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/violin-bckg-xs.jpg")} />
           <Carousel.Caption className="centered-carousel-text">
             <h1 className="main-title-text">Gosyen & Sonus Perfectus</h1>             
             <p><h3 className="sub-title-text">Distributor Musik & Sports Terpercaya se-Indonesia</h3></p>
