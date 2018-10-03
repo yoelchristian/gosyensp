@@ -57,6 +57,13 @@ a:visited {
   text-decoration: none;
 }
 
+.loader {
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
 
 
 

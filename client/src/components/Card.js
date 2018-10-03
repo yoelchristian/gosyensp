@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import API from "../utils/api.js";
 import CardDetail from "./CardDetail.js";
 import SideNav  from "./SideNav.js";
+import PropagateLoader from "react-spinners/PropagateLoader";
+
 
 class Card extends Component {
   state = {
     productData: [],
-    paramsState: {}
+    paramsState: {},
+    loading: false
   };
 
   componentDidMount() {
@@ -31,20 +34,26 @@ class Card extends Component {
   }
 
   getProduct = () => {
+    this.setState({ loading: true })
+    this.setState({ productData: [] })
     API.getAllProducts().then((res) => {
-      this.setState({ productData: res.data })
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
     });
   }
 
   getProductByCategory = () => {
+    this.setState({ loading: true })
+    this.setState({ productData: [] })
     API.getProductByCategory(this.props.match.params.category).then((res) => {
-      this.setState({ productData: res.data })
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
     });
   }
 
   getProductBySubcategory = () => {
+    this.setState({ loading: true })
+    this.setState({ productData: [] })
     API.getProductBySubcategory(this.props.match.params.subcategory).then((res) => {
-      this.setState({ productData: res.data })
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
     })
   }
 
@@ -71,7 +80,10 @@ class Card extends Component {
           </div>
           <div className="col-sm-9">
             <div>
+              
+              
               {this.renderProductData()}
+              <div className="loader"><PropagateLoader loading={this.state.loading} color={"#182c39"} size={15}/></div>
             </div>
           </div>
         </div>
