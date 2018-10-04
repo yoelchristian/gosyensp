@@ -21,18 +21,18 @@ class ControlledCarousel extends React.Component {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drum-lg.jpg")} />
-          <img id="size-md" style={{minHeight: "100%"}} src={require("../images/drum-md.jpg")} />
-          <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/drum-xs.jpg")} />
+          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drum2-lg.jpg")} />
+          <img id="size-md" style={{minHeight: "100%"}} src={require("../images/drum2-lg.jpg")} />
+          <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/drum2-xs.jpg")} />
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drum-lg.jpg")} />
-          <img id="size-md" style={{minHeight: "100%"}} src={require("../images/drum-md.jpg")} />
-          <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/drum-xs.jpg")} />
+          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/drum2-lg.jpg")} />
+          <img id="size-md" style={{minHeight: "100%"}} src={require("../images/drum2-lg.jpg")} />
+          <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/drum2-xs.jpg")} />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
