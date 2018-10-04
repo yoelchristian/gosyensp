@@ -37,7 +37,7 @@ class Card extends Component {
     this.setState({ loading: true })
     this.setState({ productData: [] })
     API.getAllProducts().then((res) => {
-      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1000) 
     });
   }
 
@@ -45,7 +45,7 @@ class Card extends Component {
     this.setState({ loading: true })
     this.setState({ productData: [] })
     API.getProductByCategory(this.props.match.params.category).then((res) => {
-      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1000) 
     });
   }
 
@@ -53,7 +53,7 @@ class Card extends Component {
     this.setState({ loading: true })
     this.setState({ productData: [] })
     API.getProductBySubcategory(this.props.match.params.subcategory).then((res) => {
-      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1500) 
+      setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1000) 
     })
   }
 

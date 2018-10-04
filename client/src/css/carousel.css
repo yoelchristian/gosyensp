@@ -20,7 +20,7 @@
   letter-spacing: 0.1vw;
 }
 
-#size-md, #size-xs {
+#size-md, #size-xs, #size-ls {
   display: none
 }
 
@@ -28,10 +28,10 @@
   display: block
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
 
 
-  #size-lg, #size-xs {
+  #size-lg, #size-xs, #size-ls {
     display: none
   }
 
@@ -41,7 +41,20 @@
 
 }
 
-@media screen and (max-width: 501px) {
+@media only screen and (orientation: landscape) {
+
+
+  #size-lg, #size-xs, #size-md {
+    display: none
+  }
+
+  #size-land {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
   .centered-carousel-text {
     width: 100%;
     transform: translate(-50%,-50%);
@@ -56,7 +69,7 @@
     display: none;
   }
 
-  #size-lg, #size-md {
+  #size-lg, #size-md, #size-ls {
     display: none
   }
 
