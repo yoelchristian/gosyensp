@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-import Flip from "react-reveal/Flip";
 import "../css/vision-mission.css";
 
 class About extends Component {
@@ -43,14 +42,14 @@ class About extends Component {
       <div className="col-sm-12">
         <h1>Nilai-Nilai Perusahaan</h1>
         <blockquote>
-          <Fade right cascade delay={1500}>
+          <Fade right cascade delay={1000}>
           <ul>
             <li>Integritas -- menjamin seluruh produk yang kami jual</li>
             <li>Ramah -- berkomunikasi dengan baik dan benar pada seluruh klien kami</li>
             <li>Melayani -- berusaha semaksimal mungkin dalam memenuhi permintaan klien</li>
           </ul>
           </Fade>        
-          <Flip right cascade delay={1500}><footer>Gosyen & Sonus Perfectus</footer></Flip>
+          <footer>Gosyen & Sonus Perfectus</footer>
         </blockquote>
       </div>
       </div>

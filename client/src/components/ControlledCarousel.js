@@ -9,7 +9,7 @@ class ControlledCarousel extends React.Component {
       <Carousel
         interval={3500}
         className="carousel-intro"
-        pauseOnHover={true}
+        pauseOnHover={false}
       >
         <Carousel.Item className="carousel-item">
           <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />

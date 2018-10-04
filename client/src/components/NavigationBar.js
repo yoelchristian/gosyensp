@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "../css/navbar.css";
 
 class NavigationBar extends React.Component {
@@ -54,6 +56,13 @@ class NavigationBar extends React.Component {
             <LinkContainer exact to="/about">
               <NavItem >
                 <span className="glyphicon glyphicon-object-align-bottom"></span> Tentang Kami 
+              </NavItem>
+            </LinkContainer>
+          </Nav>
+          <Nav pullRight>
+            <LinkContainer exact to="/products">
+              <NavItem >
+                <span className="glyphicon glyphicon-object-align-bottom"></span> Produk Kami 
               </NavItem>
             </LinkContainer>
           </Nav>

@@ -9,6 +9,14 @@
   color: white;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: white;
+}
+
 .logo-brand {
   height: 100%;
   margin-right: 5px;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch, Link, Redirect, withRouter } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 import ControlledCarousel from "./ControlledCarousel.js";
 import Card from "./Card.js";

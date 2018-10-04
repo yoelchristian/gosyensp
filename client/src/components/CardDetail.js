@@ -17,7 +17,7 @@ class CardDetail extends React.Component {
   }
 
   componentDidMount() {
-    console.log("adwd")
+    
   }
 
   handleClose() {

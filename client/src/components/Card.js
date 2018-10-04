@@ -3,6 +3,8 @@ import API from "../utils/api.js";
 import CardDetail from "./CardDetail.js";
 import SideNav  from "./SideNav.js";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 class Card extends Component {
@@ -13,24 +15,33 @@ class Card extends Component {
   };
 
   componentDidMount() {
-    console.log("refreshed")
+    this.scrollTo()
     this.setState({paramsState: this.props.match.params})
     if(this.props.match.params.subcategory) {
       this.getProductBySubcategory();
+      this.scrollTo()
     } else if (this.props.match.params.category) {
       this.getProductByCategory();
+      this.scrollTo()
     }
   }
 
   componentDidUpdate() {
+    this.scrollTo()
     if(JSON.stringify(this.props.match.params) !== JSON.stringify(this.state.paramsState)) {
       this.setState({paramsState: this.props.match.params})
       if(this.props.match.params.subcategory) {
         this.getProductBySubcategory();
+        this.scrollTo()
       } else if (this.props.match.params.category) {
         this.getProductByCategory();
+        this.scrollTo()
       }
     }
+  }
+
+  scrollTo = () => {
+    scroller.scrollTo("product-top", {duration: 1500, smooth: true, offset: -100});
   }
 
   getProduct = () => {
@@ -73,19 +84,19 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container card-container">
         <div className="row">
           <div className="col-sm-3 hidden-xs">
             <SideNav />
           </div>
+          <Element name="product-top" className="element">
           <div className="col-sm-9">
             <div>
-              
-              
               {this.renderProductData()}
               <div className="loader"><PropagateLoader loading={this.state.loading} color={"#182c39"} size={15}/></div>
             </div>
           </div>
+          </Element>
         </div>
       </div>
     )

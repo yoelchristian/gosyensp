@@ -3,12 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from "react-router-dom";
 import SvgIcon from 'react-icons-kit';
 
 import { ic_music_note } from 'react-icons-kit/md/ic_music_note';
 import { ic_directions_run } from 'react-icons-kit/md/ic_directions_run';
-import { ic_business_center } from 'react-icons-kit/md/ic_business_center';
 
 import "../css/sidenav.css";
 
@@ -18,6 +17,10 @@ class SideNavigation extends React.Component {
   }
 
   componentDidMount() {
+    
+  }
+
+  componentDidUpdate() {
     
   }
 
@@ -94,7 +97,8 @@ const SeparatorTitle = props => {
                   <NavText> {i} </NavText>
                 </Nav>
               ))}
-            </Nav>
+            </Nav> 
+            
           ); 
         } else {
           return (
