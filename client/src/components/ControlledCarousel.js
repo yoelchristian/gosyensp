@@ -6,13 +6,15 @@ import "../css/carousel.css";
 class ControlledCarousel extends React.Component {
   render() {
     return (
+      <div>
       <Carousel
-        interval={3500}
+        interval={4000}
         className="carousel-intro"
         pauseOnHover={false}
       >
         <Carousel.Item className="carousel-item">
-          <img id="size-lg" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
+          <img id="animated-logo" src={require("../images/animated-logo.gif")} />
+          <img id="size-lg" style={{minHeight: "100%", position: "absolute"}} src={require("../images/violin-bckg.jpg")} />
           <img id="size-md" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
           <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/violin-bckg-xs.jpg")} />
           <img id="size-land" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
@@ -45,6 +47,7 @@ class ControlledCarousel extends React.Component {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      </div>
     );
   }
 }

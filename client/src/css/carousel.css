@@ -7,12 +7,35 @@
   width: 100%;
   transform: translate(-50%,-50%);
   top: 55%; left: 50%;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: white;
 }
+
+#animated-logo {
+  max-width: 25vw;
+  min-width: 500px;
+  max-height: 100%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 70%; left: 50%;
+  animation: fadeInOut ease 4s;
+  -webkit-animation: fadeInOut ease 4s;
+  -moz-animation: fadeInOut ease 4s;
+  -o-animation: fadeInOut ease 4s;
+  -ms-animation: fadeInOut ease 4s;
+  opacity: 0;
+}
+
+@keyframes fadeInOut {
+  50% {opacity: 1;}
+}
+
 
 .main-title-text {
   font-size: 10vmin;
   font-family: Times;
   letter-spacing: 0.3vw;
+  z-index: 5;
 }
 
 .sub-title-text {
@@ -76,4 +99,5 @@
   #size-xs {
     display: block
   }
+
 }

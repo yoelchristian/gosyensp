@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-
+import MetisMenu from "react-metismenu";
 import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from "react-router-dom";
 import SvgIcon from 'react-icons-kit';
@@ -91,10 +91,10 @@ const SeparatorTitle = props => {
         if (NavMusik[key].subcategory) {
           return (
             <Nav key={key} id={"products/" + key}>
-              <NavText> {NavMusik[key].category} </NavText>
+              <NavText > {NavMusik[key].category} </NavText>
               {NavMusik[key].subcategory.map(i => (
                 <Nav key={i} id={i.toLowerCase()}>
-                  <NavText> {i} </NavText>
+                  <NavText style={{display: "inline", wordBreak: "break-all"}}> {i} </NavText>
                 </Nav>
               ))}
             </Nav> 

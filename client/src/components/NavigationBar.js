@@ -74,7 +74,7 @@ class NavigationBar extends React.Component {
             </LinkContainer>
           </Nav>
           
-          <Nav pullRight className="hidden-lg hidden-md">
+          <Nav pullRight className="hidden-lg hidden-md hidden-sm">
 
             <NavDropdown title="Musik" id="basic-nav-dropdown">
             {Object.keys(NavMusik).map(key => {

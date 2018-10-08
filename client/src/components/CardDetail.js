@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "react-image";
 import { Modal, Button } from "react-bootstrap";
 
 import "../css/card.css";
@@ -28,21 +29,21 @@ class CardDetail extends React.Component {
     this.setState({ show: true });
   }
 
+  defaultImage(ev) {
+    ev.taget.src = require("../images/logo1.png")
+  }
+
   render() {
     return (
-      <div className="col-lg-4">
+      <div className="col-lg-4 col-md-6" style={{ paddingLeft: 0, paddingRight: 0 }}>
         <div onClick={this.handleShow} className="card">
-          <div className="img-container">
-            <img className="card-image" />
+          <div className="img-container" style={{width:"auto", height:"70%", paddingTop: "10px"}}>
+            <Img src="https://s3-ap-southeast-1.amazonaws.com/gosyensp/Cello+Half.jpg" style={{maxWidth: "100%", maxHeight: "100%"}}/>
           </div>
           <div className="info-container">
             <h4><b>{this.props.title}</b></h4>
-            <h6>{this.props.itemCode}</h6>
-            <p>Harga: {this.props.itemCategory}</p>
-            <p>Stock: {this.props.qtyOnhand} pcs</p>
-            <p>Stock: {this.props.qtyOnhand} pcs</p>
-            <p>Stock: {this.props.qtyOnhand} pcs</p>
-
+            <h6>{this.props.itemCode}</h6>        
+            <p>Harga: Hubungi Kami</p>
           </div>
         </div>
 

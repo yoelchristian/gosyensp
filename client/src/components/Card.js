@@ -16,14 +16,19 @@ class Card extends Component {
 
   componentDidMount() {
     this.scrollTo()
-    this.setState({paramsState: this.props.match.params})
-    if(this.props.match.params.subcategory) {
-      this.getProductBySubcategory();
-      this.scrollTo()
-    } else if (this.props.match.params.category) {
-      this.getProductByCategory();
-      this.scrollTo()
+    if(this.props.match.url === "/products") {
+      this.getProduct();
+    } else {
+      if(this.props.match.params.subcategory) {
+        this.getProductBySubcategory();
+        this.scrollTo()
+      } else if (this.props.match.params.category) {
+        this.getProductByCategory();
+        this.scrollTo()
+      }
     }
+    this.setState({paramsState: this.props.match.params})
+    
   }
 
   componentDidUpdate() {
