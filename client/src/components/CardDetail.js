@@ -44,6 +44,9 @@ class CardDetail extends React.Component {
             <h4><b>{this.props.title}</b></h4>
             <h6>{this.props.itemCode}</h6>        
             <p>Harga: Hubungi Kami</p>
+            <p>Harga: Hubungi Kami</p>
+            <p>Harga: Hubungi Kami</p>
+            <p>Harga: Hubungi Kami</p>
           </div>
         </div>
 

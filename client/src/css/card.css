@@ -4,7 +4,7 @@
   max-height: 50vh;
   height: 400px;
   margin: 0px;
-  overflow: none;
+  overflow: auto;
 }
 
 .card-container {
@@ -34,7 +34,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
