@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "react-image";
+import BounceLoader from "react-spinners/BounceLoader";
 import { Modal, Button } from "react-bootstrap";
 
 import "../css/card.css";
@@ -39,7 +40,7 @@ class CardDetail extends React.Component {
         <div onClick={this.handleShow} className="card">
         <div className="card-inner">
           <div className="img-container" style={{width:"auto", height:"70%", paddingTop: "10px"}}>
-            <Img src={"https://s3-ap-southeast-1.amazonaws.com/gosyensp/" + this.props.itemCode + "A.jpg"} style={{maxWidth: "100%", maxHeight: "100%"}}/>
+            <Img src={"https://s3-ap-southeast-1.amazonaws.com/gosyensp/" + this.props.itemCode + "A.jpg"} style={{maxWidth: "100%", maxHeight: "100%"}} loader={<BounceLoader />}/>
           </div>
           <div className="info-container">
             <h4><b>{this.props.title}</b></h4>
