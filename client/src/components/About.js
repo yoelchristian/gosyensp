@@ -17,7 +17,7 @@ class About extends Component {
         <div className="col-sm-12 col-md-6">
         <h1>Visi</h1>
         <blockquote>
-        <Fade right cascade delay={1500}><div><p>Menjadi distributor business-to-business utama alat musik dan olahraga di Indonesia.</p></div></Fade>
+        <Fade right cascade><div><p>Menjadi distributor business-to-business utama alat musik dan olahraga di Indonesia.</p></div></Fade>
           <footer>Gosyen & Sonus Perfectus</footer>
         </blockquote>
         </div>
@@ -25,7 +25,7 @@ class About extends Component {
         <div className="col-sm-12 col-md-6">
         <h1>Misi</h1>
         <blockquote>
-          <Fade right cascade delay={1500}>
+          <Fade right cascade>
           <ul>
             <li>Menjaga kualitas, harga, dan ketersediaan produk sesuai dengan standar perusahaan.</li>
             <li>Menjalin hubungan baik dengan mitra pertokoan di seluruh Indonesia.</li>
@@ -42,7 +42,7 @@ class About extends Component {
       <div className="col-sm-12">
         <h1>Nilai-Nilai Perusahaan</h1>
         <blockquote>
-          <Fade right cascade delay={1000}>
+          <Fade right cascade>
           <ul>
             <li>Integritas -- menjamin seluruh produk yang kami jual</li>
             <li>Ramah -- berkomunikasi dengan baik dan benar pada seluruh klien kami</li>

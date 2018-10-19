@@ -78,46 +78,21 @@ class NavigationBar extends React.Component {
 
             <NavDropdown title="Musik" id="basic-nav-dropdown">
             {Object.keys(NavMusik).map(key => {
-          
-              if (NavMusik[key].subcategory) {
-                return (
-                  <NavDropdown title={NavMusik[key].category} id={key}>
-                    {NavMusik[key].subcategory.map(i => (
-                      <LinkContainer to={"/products/" + key + "/" + i }>
-                        <MenuItem> {i} </MenuItem>
-                      </LinkContainer>
-                    ))}
-                  </NavDropdown>
-                ); 
-              } else {
-                return (
-                <LinkContainer to={"/products/" + key}>
+              return (
+                <LinkContainer to={"/products/" + NavMusik[key].category}>
                   <MenuItem> {NavMusik[key].category} </MenuItem>
-                </LinkContainer>                );
-              }
+                </LinkContainer>
+              ); 
             })}
             </NavDropdown>
 
             <NavDropdown title="Olahraga" id="basic-nav-dropdown2">
             {Object.keys(NavSports).map(key => {
-          
-              if (NavSports[key].subcategory) {
-                return (
-                  <NavDropdown title={NavSports[key].category} id={key}>
-                    {NavSports[key].subcategory.map(i => (
-                      <LinkContainer to={"/products/" + key + "/" + i }>
-                        <MenuItem> {i} </MenuItem>
-                      </LinkContainer>
-                    ))}
-                  </NavDropdown>
-                ); 
-              } else {
-                return (
-                  <LinkContainer to={"/products/" + key}>
-                    <MenuItem> {NavSports[key].category} </MenuItem>
-                  </LinkContainer>
-                );
-              }
+              return (
+                <LinkContainer to={"/products/" + NavSports[key].category}>
+                  <MenuItem> {NavSports[key].category} </MenuItem>
+                </LinkContainer>
+              );
             })}
             </NavDropdown>
 

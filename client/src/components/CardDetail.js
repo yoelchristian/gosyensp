@@ -37,17 +37,17 @@ class CardDetail extends React.Component {
     return (
       <div className="col-lg-4 col-md-6" style={{ paddingLeft: 0, paddingRight: 0 }}>
         <div onClick={this.handleShow} className="card">
+        <div className="card-inner">
           <div className="img-container" style={{width:"auto", height:"70%", paddingTop: "10px"}}>
-            <Img src="https://s3-ap-southeast-1.amazonaws.com/gosyensp/Cello+Half.jpg" style={{maxWidth: "100%", maxHeight: "100%"}}/>
+            <Img src={"https://s3-ap-southeast-1.amazonaws.com/gosyensp/" + this.props.itemCode + "A"} style={{maxWidth: "100%", maxHeight: "100%"}}/>
+            <Img src={"https://s3-ap-southeast-1.amazonaws.com/gosyensp/" + this.props.itemCode + "B"} style={{maxWidth: "100%", maxHeight: "100%"}}/>
           </div>
           <div className="info-container">
             <h4><b>{this.props.title}</b></h4>
             <h6>{this.props.itemCode}</h6>        
             <p>Harga: Hubungi Kami</p>
-            <p>Harga: Hubungi Kami</p>
-            <p>Harga: Hubungi Kami</p>
-            <p>Harga: Hubungi Kami</p>
           </div>
+        </div>
         </div>
 
         <Modal show={this.state.show} onHide={this.handleClose}>

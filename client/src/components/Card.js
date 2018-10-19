@@ -3,7 +3,6 @@ import API from "../utils/api.js";
 import CardDetail from "./CardDetail.js";
 import SideNav  from "./SideNav.js";
 import PropagateLoader from "react-spinners/PropagateLoader";
-import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
