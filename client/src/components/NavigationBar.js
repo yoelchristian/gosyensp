@@ -60,7 +60,7 @@ class NavigationBar extends React.Component {
             </LinkContainer>
           </Nav>
           <Nav pullRight>
-            <LinkContainer exact to="/products">
+            <LinkContainer exact to="/products/drum">
               <NavItem >
                 <span className="glyphicon glyphicon-object-align-bottom"></span> Produk Kami 
               </NavItem>

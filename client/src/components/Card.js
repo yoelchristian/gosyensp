@@ -3,6 +3,7 @@ import API from "../utils/api.js";
 import CardDetail from "./CardDetail.js";
 import SideNav  from "./SideNav.js";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { PageHeader } from "react-bootstrap";
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
@@ -95,6 +96,7 @@ class Card extends Component {
           </div>
           <Element name="product-top" className="element">
           <div className="col-sm-9">
+            <PageHeader className="capitalize" style={{marginTop: "0px"}}> {this.props.match.params.category} </PageHeader>
             <div>
               {this.renderProductData()}
               <div className="loader"><PropagateLoader loading={this.state.loading} color={"#182c39"} size={15}/></div>

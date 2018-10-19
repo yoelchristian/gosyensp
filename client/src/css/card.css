@@ -38,6 +38,10 @@
   max-height: 100%;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
