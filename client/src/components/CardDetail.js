@@ -45,7 +45,7 @@ class CardDetail extends React.Component {
           <div className="info-container">
             <h4><b>{this.props.title}</b></h4>
             <h6>{this.props.itemCode}</h6>        
-            <p>Harga: Hubungi Kami</p>
+            <p>Harga: Rp. {this.props.itemCategory}</p>
           </div>
         </div>
         </div>
