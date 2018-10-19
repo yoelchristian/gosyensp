@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -51,7 +51,13 @@ class NavigationBar extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
-        <Navbar.Collapse>
+        
+        <Navbar.Collapse><Navbar.Form pullRight>
+      <FormGroup>
+        <FormControl type="text" placeholder="Search" />
+      </FormGroup>{' '}
+      <Button type="submit">Submit</Button>
+    </Navbar.Form>
           <Nav pullRight>
             <LinkContainer exact to="/about">
               <NavItem >
@@ -79,7 +85,7 @@ class NavigationBar extends React.Component {
             <NavDropdown title="Musik" id="basic-nav-dropdown">
             {Object.keys(NavMusik).map(key => {
               return (
-                <LinkContainer to={"/products/" + NavMusik[key].category}>
+                <LinkContainer to={"/products/" + key}>
                   <MenuItem> {NavMusik[key].category} </MenuItem>
                 </LinkContainer>
               ); 
@@ -89,7 +95,7 @@ class NavigationBar extends React.Component {
             <NavDropdown title="Olahraga" id="basic-nav-dropdown2">
             {Object.keys(NavSports).map(key => {
               return (
-                <LinkContainer to={"/products/" + NavSports[key].category}>
+                <LinkContainer to={"/products/" + key}>
                   <MenuItem> {NavSports[key].category} </MenuItem>
                 </LinkContainer>
               );
