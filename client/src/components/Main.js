@@ -29,6 +29,7 @@ class Main extends Component {
 
         <ScrollToTop />
         <Footer />
+        <img src={require("../images/wyler-sm.png")} />
         </div>
         
       </Router>

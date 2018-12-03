@@ -53,10 +53,6 @@ class NavigationBar extends React.Component {
         </Navbar.Header>
         
         <Navbar.Collapse><Navbar.Form pullRight>
-      <FormGroup>
-        <FormControl type="text" placeholder="Search" />
-      </FormGroup>{' '}
-      <Button type="submit">Submit</Button>
     </Navbar.Form>
           <Nav pullRight>
             <LinkContainer exact to="/about">

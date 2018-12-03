@@ -13,7 +13,6 @@ class ControlledCarousel extends React.Component {
         pauseOnHover={false}
       >
         <Carousel.Item className="carousel-item">
-          <img id="animated-logo" src={require("../images/animated-logo.gif")} />
           <img id="size-lg" style={{minHeight: "100%", position: "absolute"}} src={require("../images/violin-bckg.jpg")} />
           <img id="size-md" style={{minHeight: "100%"}} src={require("../images/violin-bckg.jpg")} />
           <img id="size-xs" style={{minHeight: "100%"}} src={require("../images/violin-bckg-xs.jpg")} />
