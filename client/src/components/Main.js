@@ -6,6 +6,7 @@ import Card from "./Card.js";
 import About from "./About.js";
 import Footer from "./Footer.js";
 import ScrollToTop from "./ScrollToTop.js";
+import Print from "./Print.js";
 
 class Main extends Component {
 
@@ -13,7 +14,8 @@ class Main extends Component {
     return (
       <Router>
         <div>
-        <div className="main-container">
+          <Print />
+        {/* <div className="main-container">
         
           <NavigationBar />
           <ControlledCarousel />
@@ -29,7 +31,7 @@ class Main extends Component {
 
         <ScrollToTop />
         <Footer />
-        <img src={require("../images/wyler-sm.png")} />
+        <img src={require("../images/wyler-sm.png")} /> */}
         </div>
         
       </Router>

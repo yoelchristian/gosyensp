@@ -53,6 +53,7 @@ class Card extends Component {
     this.setState({ loading: true })
     this.setState({ productData: [] })
     API.getAllProducts().then((res) => {
+      console.log(res.data)
       setTimeout(() => { this.setState({ loading: false }); this.setState({ productData: res.data })}, 1000) 
     });
   }
