@@ -14,8 +14,8 @@ class Main extends Component {
     return (
       <Router>
         <div>
-          <Print />
-        {/* <div className="main-container">
+          {/* <Print /> */}
+        <div className="main-container">
         
           <NavigationBar />
           <ControlledCarousel />
@@ -31,7 +31,7 @@ class Main extends Component {
 
         <ScrollToTop />
         <Footer />
-        <img src={require("../images/wyler-sm.png")} /> */}
+        <img src={require("../images/wyler-sm.png")} />
         </div>
         
       </Router>
